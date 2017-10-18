@@ -30,7 +30,6 @@
 
 
 ---
-class: double
 # Computational resources: *Sisu* & *Taito*
 
 ## **Sisu**
