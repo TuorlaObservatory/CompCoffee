@@ -1,3 +1,39 @@
+# [IT-services](https://intranet.utu.fi/index/Sivut/it-palvelut.aspx) provided by the University of Turku
+
+## Services
+- [Horizon](https://horizon.utu.fi) provides browser-based access to remote tools, including:
+    - Windows 10 remote desktop
+    - Office 2016
+    - Personec HR
+    - SAP portal
+- Datastorage
+    - [Seafile](https://seafile.utu.fi) provides 100 Gb of cloud-based storage. Can be also accessed via mobile abplications.
+    - Network folder (up to 25 Gb), accessed mostly from cable-conencted Windows machines.
+    - IDA by CSC
+    - TALTIO by UTU
+- Password management at [idm.utu.fi](https://idm.utu.fi)
+- Wireless network services
+    - Eduroam (also available at other facilities and in other countries)
+    - UTU-Guest
+- [VPN](https://vpn.utu.fi) access to internal network - the only way to connect to Tuorla work machine remotely
+    - Cisco AnyConnect
+- [Software](https://utushop.utu.fi/software)
+    - Office 365 
+    - F-Secure
+- Private WordPress [webpage](https://users.utu.fi)
+- UTU shop handles all hardware requests (should be approved by the director)
+- [GitLab](https://gitlab.utu.fi) available for university staff members and students
+- Cloud-based national file sharing system [https://filesender.funet.fi](https://filesender.funet.fi)
+
+## Contact information
+- [Pasi Nurmi](mailto:pasnurmi@utu.fi) (handles Windows-based systems)
+- [Kaj Wiik](mailto:kaj.wiik@utu.fi) (handles \*nix systems & Tuorla's own computing resources)
+- [Helpdesk](mailto:helpdesk@utu.fi) (general IT-related issues that cannot be resolved by Pasi or Kaj)
+- Help request [webform](https://forms.utu.fi/private/it-yleislomake)
+- Internal phone service [**6000**](tel:6000) (available 8-16)
+
+---
+
 # CSC Services in a nutshell
 
 ## CompCoffee 2017
