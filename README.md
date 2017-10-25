@@ -7,6 +7,7 @@ You can suggest topics in [issues](https://github.com/natj/CompCoffee/issues/1)
 Topics covered so far:
 - [x] [Wed 11.10.2017 git](./intro-git)
 - [x] [Wed 18.10.2017 University/CSC IT services](./it-services)
-- [ ] Wed 25.10.2017 Introduction to Python
+- [ ] [Wed 25.10.2017 Overleaf](./overleaf-git)
+- [ ] Wed 1.11.2017 Introduction to Python
 
 
