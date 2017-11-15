@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introducing Python</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/static/img/icon.png" />
+		<link href="https://rawgit.com/csc-training/slide-template/master/remark/talk.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <textarea id="source">
+layout: true
+background-image: url(https://rawgit.com/csc-training/slide-template/master/remark/img/normal.png)
+---
+
+background-image: url(https://rawgit.com/csc-training/slide-template/master/remark/img/title-en.png)
+background-size: contain;
+class: title-slide
+
+# Introducing Python
+
+## CompCoffee 2017
+
+---
+# What is Python?
+
+- High-level general-purpose programming language by Guido van Rossum (1991)
+- Interpreted
+- Loosely/dynamically typed
+- Aim for Python3 (2.7 support stops in 2020)
+    - asynchronicity, generators, coroutines, ...
+
+---
+#Design
+
+- Design philosophy emphasizes:
+    - code readability
+    - expressing concepts in fewer lines of code
+    - support for **procedural** and **object-oriented** programming
+
+- *code is read much more often than it is written*
+
+---
+# Look and feel
+
+```python
+# fibonacci
+def fib(n):
+    if n<2:
+        return n
+    return fib(n-1)+fib(n-2)
+```
+
+```python
+# statistics of random matrices
+def randmatstat(t):
+    n = 5
+    v = zeros(t)
+    w = zeros(t)
+    for i in range(t):
+        a = randn(n, n)
+        b = randn(n, n)
+        c = randn(n, n)
+        d = randn(n, n)
+        P = concatenate((a, b, c, d), axis=1)
+        Q = concatenate((concatenate((a, b), axis=1), concatenate((c, d), axis=1)), axis=0)
+        v[i] = trace(matrix_power(dot(P.T,P), 4))
+        w[i] = trace(matrix_power(dot(Q.T,Q), 4))
+    return (std(v)/mean(v), std(w)/mean(w))
+```
+
+---
+# AstroBetter Python summary:
+- Free
+- write once, run anywhere (unlike C or C++, dont need to manually recompile)
+- All in one programming/plotting (replacement for IDL).
+- Faster than IDL, slower than C but more user friendly.
+- Gives full access to historical IRAF algorithms via PyRAF
+- Used for Hubble/ALMA pipelines.
+- Many statistics/numerical recipes packages available.
+- Makes nicer plots than IDL... what you see is what you get, even in postscript (unlike IDL).
+
+
+---
+# Core libraries (that I include almost every time)
+
+- NumPy (numerics: matrices, integrators...)
+- SciPy (toolbox for scientists: fft, optimization, statistics,...)
+- matplotlib (THE plotting library)
+
+
+```python
+import numpy as np
+from scipy import NAME_OF_MY_TOOL
+import matplotlib import pyplot as plt
+```
+
+
+---
+# Learning Python
+
+- See *Learn X in Y minutes* series: https://learnxinyminutes.com/docs/python3/
+- online CSC course on python: notebooks.csc.fi -> launch Introduction to Python
+- **scipy**: 
+    - http://www.scipy-lectures.org/intro/scipy.html#scipy
+- **visualization**: 
+    - http://www.scipy-lectures.org/intro/matplotlib/index.html#matplotlib
+- **code cookbook**: 
+    - http://scipy-cookbook.readthedocs.io
+- **why?**: 
+    - http://bellm.org/blog/2011/05/27/why-astronomers-should-program-in-python/
+
+
+---
+
+background-image: url(https://rawgit.com/csc-training/slide-template/master/remark/img/author.png)
+class: author-slide
+
+# Joonas Nättilä
+
+CompCoffee 2017
+
+CSC – IT Center for Science Ltd.
+
+nattila.joonas@gmail.com
+
+![:author](https://rawgit.com/csc-training/slide-template/master/remark/img/csc-identicon.png)
+
+</textarea>
+
+    <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
+    </script>
+
+    <script type="text/javascript">
+    remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    remark.macros.size = function (x,y) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + x + 'px; height: ' + y + 'px" />';
+    };
+    remark.macros.author = function () {
+        var url = this;
+        return '<img src="' + url + '" class=author-pic />';
+    };
+    var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: '',
+        highlightStyle: 'default',
+        highlightLines: true
+      }) ;
+    </script>
+
+    <!-- for offline mathjax see http://stackoverflow.com/a/19209462 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+    MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "TeX": {
+          Macros: {AA : "{\\unicode{x212B}}"},
+          extensions: ["autoload-all.js"]
+        },
+        "HTML-CSS": {
+          scale: 90
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+            return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+    });
+
+    MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      MACROS.color = "Color";
+      delete MACROS.colorbox;
+      delete MACROS.fcolorbox;
+    });
+
+    MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
