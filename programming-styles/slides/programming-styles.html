@@ -278,8 +278,8 @@
     }
     else
     {
-        while(x != y)
-            somethingElse(&x, arg1, arg2, arg3, arg4,
+            while(x != y)
+                somethingElse(&x, arg1, arg2, arg3, arg4,
                             &y, arg6, arg7, arg8, arg9);
     }
     ```
@@ -336,6 +336,71 @@
 
     - Think of reusability! If a certain operation is performed several times in different places, consider moving it to a separate method. **Avoid copy-pasting code!**
 
+    --
+
+    - Avoid obsolete and unclear commands & instructions. In particular, never use `go to`. Follow new syntax and style recomendations that are released once per N years.
+
+    --
+
+    - Use brackets/other delimiters when necessary to improve code structure
+
+    ```C
+    a1+b1+c1+d1*f2 = (a1 + b1) + c1 + (d1 * f2)
+    ```
+
+    --
+
+    - Make your functions short. A rule of thumb - source code of one function should fit in one screen. Try to limit line length to approx. 80 symbols. If your code snippet is significantly larger, break it into smaller pieces.
+
+    ---
+
+    class: utu-back
+
+    # What else?
+
+    --
+
+    - Add some checks and tests. E.g. ensure that parameter that you get is valid.
+    
+    ```C
+    RESULT calculateIntegral(double lowerLim, double upperLim, double * result)
+    {
+        *result = 0.0;
+        if(lowerLim > upperLim)
+            return ERR_OUT_OF_RANGE;
+        ...
+        return SUCCESS;
+    }
+
+    ```
+
+    --
+
+    - Be extra careful with non-typed languages like `Python`. Consider also checking if you get parameter of proper type (e.g. you expect number, but get string).
+
+    --
+
+    - You can apply these rules to your `LaTeX` sources. Make your environemnts more user-friendly, consider defining shortcuts and new commands (but do not overdo).
+
+    ---
+
+    class: utu-back
+
+    # List of useful links
+
+    - [PEP 8 - Style guide for `Python` code](https://www.python.org/dev/peps/pep-0008/)
+
+    - [Google `Python` style guide](https://google.github.io/styleguide/pyguide.html)
+
+    - [Google `R` style guide](https://google.github.io/styleguide/Rguide.xml)
+
+    - [Google `C++` style guide](https://google.github.io/styleguide/cppguide.html)
+
+    - [NASA `C` guide, very strict](http://homepages.inf.ed.ac.uk/dts/pm/Papers/nasa-c-style.pdf)
+
+    - [There is even one for `FORTRAN`](http://www.fortran.com/Fortran_Style.pdf)
+
+    
     ---
 
     class: utu-back, title-slide, center, middle
