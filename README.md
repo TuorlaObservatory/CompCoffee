@@ -9,7 +9,7 @@ Topics covered so far:
 - [x] [Wed 18.10.2017 University/CSC IT services](./it-services)
 - [x] [Wed 25.10.2017 Overleaf](./overleaf-git)
 - [x] ---- Skipped due to NOT school
-- [ ] Wed 8.11.2017 The unbearable lightness of counting. (Prelude to Bayesian thinking)
-- [ ] Wed 15.11.2017 Introduction to Python
-- [ ] Wed 22.11.2017 Fitting a straight line?
+- [x] Wed 8.11.2017 The unbearable lightness of counting. (Prelude to Bayesian thinking)
+- [x] [Wed 15.11.2017 Introduction to Python](./python)
+- [ ] [Wed 22.11.2017 Programming styles](./programming-styles)
 
