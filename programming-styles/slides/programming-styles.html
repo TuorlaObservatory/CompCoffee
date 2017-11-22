@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <style type="text/css">
     @page {
-    size: 1920px 1080px;
+    size: 1210px 681px;
     margin: 0;
     }
     @media print {
@@ -81,16 +81,16 @@
  
     ```python
     def f(a,b):
-    v = 0; w = 0; f23 = 0; pp = 0
-    for var1 in a: v = v + var1
-    for w1 in b: w = w1/len(b) + w
-    v = 1.0/len(a) * v; 
-    for var2 in a: f23 = pow(var2 - v, 2)  + f23
-    f23 = pow(f23/(len(a) - 1), 0.5)
-    for w2 in b: pp = pp + pow(w - w2, 2)/(len(b) - 1)
-    pp = pow(pp, 0.5)
-    print("%4.2f +- %4.2f\t%4.2f +- %4.2f" % (v, f23, w, pp))
-    return
+        v = 0; w = 0; f23 = 0; pp = 0
+        for var1 in a: v = v + var1
+        for w1 in b: w = w1/len(b) + w
+        v = 1.0/len(a) * v; 
+        for var2 in a: f23 = pow(var2 - v, 2)  + f23
+        f23 = pow(f23/(len(a) - 1), 0.5)
+        for w2 in b: pp = pp + pow(w - w2, 2)/(len(b) - 1)
+        pp = pow(pp, 0.5)
+        print("%4.2f +- %4.2f\t%4.2f +- %4.2f" % (v, f23, w, pp))
+        return
     ```
     
     Can you guess what happens if I call `f([1, 2, 3, 4], [ 60, 35, 2, 0, 35])`?
@@ -104,46 +104,46 @@
     .pull-left[
     ```python
     def mean_and_sd(sample):
-    """ Calcualtes mean and standard deviation  
-    Args: 
-        sample as list
-    Returns:
-        (mean, standard deviation) as tuple
-    """
-    # Initialization of variables
-    mean = 0    
-    sd = 0
-    # Calculates mean
-    for item in sample:
-        mean += item
-    mean /= len(sample)
-    # Calculates standard deviation
-    for item in sample:
-        sd += pow(item - mean, 2)
-    sd = pow(sd / (len(sample) - 1), 0.5)
-    # Returns tuple
-    return (mean, sd)
+        """ Calcualtes mean and standard deviation  
+        Args: 
+            sample as list
+        Returns:
+            (mean, standard deviation) as tuple
+        """
+        # Initialization of variables
+        mean = 0    
+        sd = 0
+        # Calculates mean
+        for item in sample:
+            mean += item
+        mean /= len(sample)
+        # Calculates standard deviation
+        for item in sample:
+            sd += pow(item - mean, 2)
+        sd = pow(sd / (len(sample) - 1), 0.5)
+        # Returns tuple
+        return (mean, sd)
     ```
     ]
 
     .pull-right[
     ```python
     def compare_samples(sample_1, sample_2):
-    """Compares two samples and prints mean values
-    as well as standard deviations.
-    Args:
-        sample_1 : first sample, expected a list
-        sample_2 : second sample, expected a list
-    """
-    # Statistics of first sample
-    result_1 = mean_and_sd(sample_1)
-    # Statistics of second sample
-    result_2 = mean_and_sd(sample_2)
-    # Prints results
-    print("%4.2f +- %4.2f\t%4.2f +- %4.2f" 
-        % (result_1[0], result_1[1], 
-            result_2[0], result_2[1]))
-
+        """Compares two samples and prints mean values
+        as well as standard deviations.
+        Args:
+            sample_1 : first sample, expected a list
+            sample_2 : second sample, expected a list
+        """
+        # Statistics of first sample
+        result_1 = mean_and_sd(sample_1)
+        # Statistics of second sample
+        result_2 = mean_and_sd(sample_2)
+        # Prints results
+        print("%4.2f +- %4.2f\t%4.2f +- %4.2f" 
+            % (result_1[0], result_1[1], 
+                result_2[0], result_2[1]))
+        return
 
     # Call to method
     compare_samples([1, 2, 3, 4], [60, 35, 2, 0, 35])
@@ -272,15 +272,15 @@
     ``` C
     if(x == y)
     {
-            something();
-            for (int i = 0; i < N; i++)
-                someIterativeOperation(i);
+        something();
+        for (int i = 0; i < N; i++)
+            someIterativeOperation(i);
     }
     else
     {
-            while(x != y)
-                somethingElse(&x, arg1, arg2, arg3, arg4,
-                            &y, arg6, arg7, arg8, arg9);
+        while(x != y)
+            somethingElse(&x, arg1, arg2, arg3, arg4,
+                        &y, arg6, arg7, arg8, arg9);
     }
     ```
 
@@ -317,13 +317,13 @@
 
     ``` python
         def func(arg):
-        """ Short desciption of what function does
-            Args:
-                arg: Very important parameter
-            Returns: Nothing
-            Raises: Scary run-time exceptions
-        """
-        return
+            """ Short desciption of what function does
+                Args:
+                    arg: Very important parameter
+                Returns: Nothing
+                Raises: Scary run-time exceptions
+            """
+            return
     ```
 
     ---
