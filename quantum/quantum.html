@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quantum Computing</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.rawgit.com/Ilia-Kosenkov/UTU-slides/81794612/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <textarea id="source">
+        layout: true
+
+        ---
+
+        class: title-slide, utu-back-title
+       
+        # Quantum Computing
+        ## **Comp Coffee** @ Tuorla, 2017-11-29
+
+        ---
+
+        class: utu-back-content
+        # What is quantum computing?
+
+        - Quantum computers operate on qubits [*CUE*-bits]
+        - Two fundamental properties of qubits - superposition and entanglement\
+        - States are represented as vectors in Hilbert space
+        (product `\(\langle\phi|\psi\rangle= \sum_i \phi_i^*\psi_i\)`)
+        - Two states: `\(|0\rangle\)` (zero-ket) and `\(|1\rangle\)` (one-ket)
+
+        `\(|0\rangle = \begin{bmatrix}1 \\ 0\end{bmatrix}\)`, `\(|1\rangle = \begin{bmatrix}0 \\ 1\end{bmatrix}\)`, `\(|+\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ 1\end{bmatrix}\)`, `\(|-\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ -1\end{bmatrix}\)`, 
+        `\(|\circlearrowright\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ i\end{bmatrix}\)`, `\(|\circlearrowleft\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ -i\end{bmatrix}\)`
+        
+        ---
+
+        class: utu-back-content
+        # What is quantum computing?
+
+        - Entangled state of two qubit system
+
+        `\(\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\)`
+
+        - Classical gates: **NOT, AND, OR**, also **XOR, NAND**
+
+        - Another important gate: **CNOT**, or controlled **NOT**
+
+        ---
+        class: utu-back-content
+        # Quantum gates
+
+        - *Pauli* gates `\(\mathbf{X, Y, Z}\)` (unary)
+        - *Clifford* gates  `\(\mathbf{S, H, S^\dagger}\)` (superpositions)
+        - Other gates from non-*Clifford* group
+        - Measurement gate that sends qubit value to a respective normal bit
+
+        ---
+        class: utu-back-content
+        # Quantum gates
+        .double[
+        .column[
+        - `\(\mathbf{X} = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}\)`, rotation on `\(\pi\)` around x
+        - `\(\mathbf{Y} = \begin{bmatrix}0 & -i \\ i & 0\end{bmatrix}\)`
+        - `\(\mathbf{Z} = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}\)`
+        - Note that `\(|\psi\rangle = \cos\left(\frac{\theta}{2}\right)|0\rangle + e^{i\phi}\sin\left(\frac{\theta}{2}\right)|1>\)` and 
+        `\(\)`
+        ]
+        .column[
+        ![:scale 80%](img/bloch-sphere.png)
+        ]
+        ]
+
+        ---
+        class: utu-back-content
+        # Quantum gates
+        .double[
+        .column[
+        - `\(\mathbf{H} = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}\)`, 
+        
+        `\(\mathbf{H}\)` applied to `\(|0\rangle\)` gives `\(|+\rangle\)`
+        - `\(\mathbf{S} = \begin{bmatrix}1 & 0 \\ 0 & i\end{bmatrix}\)`
+        - `\(\mathbf{S^\dagger} = \begin{bmatrix}1 & 0 \\ 0 & -i\end{bmatrix}\)`
+       
+        ]
+        .column[
+        ![:scale 80%](img/bloch-sphere-2.png)
+        ]
+        ]
+
+
+        ---
+        class: utu-back-content
+        # **CNOT** two-qubit gate
+        .double[
+        .column[
+        `\(\begin{bmatrix}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0\end{bmatrix}\)`
+
+        - `\(|00\rangle \rightarrow |00\rangle\)`
+        - `\(|10\rangle \rightarrow |10\rangle\)`
+        - `\(|01\rangle \rightarrow |11\rangle\)`
+        - `\(|11\rangle \rightarrow |01\rangle\)`       
+        ]
+        .column[
+        ![:scale 100%](img/CNOT.png)
+        ]
+        ]
+
+        ---
+        class: utu-back-content, middle, center
+
+        # Go on and check it out!
+        ## [IBM Quantum Experience](https://quantumexperience.ng.bluemix.net/)
+    </textarea>
+
+    <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
+    </script>
+
+    <script type="text/javascript">
+    remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    remark.macros.size = function (x,y) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + x + 'px; height: ' + y + 'px" />';
+    };
+    remark.macros.author = function () {
+        var url = this;
+        return '<img src="' + url + '" class=author-pic />';
+    };
+    var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: '',
+        highlightStyle: 'default',
+        highlightLines: true
+      }) ;
+    </script>
+
+    <!-- for offline mathjax see http://stackoverflow.com/a/19209462 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+    MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "TeX": {
+          Macros: {AA : "{\\unicode{x212B}}"},
+          extensions: ["autoload-all.js"]
+        },
+        "HTML-CSS": {
+          scale: 90
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+            return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+    });
+    MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      MACROS.color = "Color";
+      delete MACROS.colorbox;
+      delete MACROS.fcolorbox;
+    });
+    MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
