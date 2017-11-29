@@ -18,3 +18,4 @@ Topics covered so far:
 Upcoming for 2018:
 - [ ] Fitting a straight line
 - [ ] Actually fitting a straight line with computers
+- [ ] Windows subsystem for Linux
