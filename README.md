@@ -11,5 +11,10 @@ Topics covered so far:
 - [x] ---- Skipped due to NOT school
 - [x] Wed 8.11.2017 The unbearable lightness of counting. (Prelude to Bayesian thinking)
 - [x] [Wed 15.11.2017 Introduction to Python](./python)
-- [ ] [Wed 22.11.2017 Programming styles](./programming-styles)
+- [x] [Wed 22.11.2017 Programming styles](./programming-styles)
+- [ ] Wed 29.11 Quantum computing ala astrophysicists
 
+
+Upcoming for 2018:
+- [ ] Fitting a straight line
+- [ ] Actually fitting a straight line with computers
