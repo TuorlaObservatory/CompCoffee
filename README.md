@@ -4,7 +4,7 @@ Computational coffee break in Tuorla Observatory. We plan to meet every Wednesda
 
 You can suggest topics in [issues](https://github.com/natj/CompCoffee/issues/1)
 
-Topics covered so far:
+Topics covered so far in 2017:
 - [x] [Wed 11.10.2017 git](./intro-git)
 - [x] [Wed 18.10.2017 University/CSC IT services](./it-services)
 - [x] [Wed 25.10.2017 Overleaf](./overleaf-git)
@@ -12,10 +12,13 @@ Topics covered so far:
 - [x] Wed 8.11.2017 The unbearable lightness of counting. (Prelude to Bayesian thinking)
 - [x] [Wed 15.11.2017 Introduction to Python](./python)
 - [x] [Wed 22.11.2017 Programming styles](./programming-styles)
-- [ ] Wed 29.11 Quantum computing ala astrophysicists
+- [x] [Wed 29.11.2017 Quantum computing ala astrophysicists](./quantum)
+
+Schedule for 2018
+
+- [x] Wed 24.01.2018 Road so far (what we already have discussed and what should we focus on)
+- [x] Wed 31.01.2018 Windows Subsystems for Linux
+- [ ] Wed 07.02.2018 Data Visualization 01
 
 
-Upcoming for 2018:
-- [ ] Fitting a straight line
-- [ ] Actually fitting a straight line with computers
-- [ ] Windows subsystem for Linux
+
