@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Visualization</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.rawgit.com/Ilia-Kosenkov/UTU-slides/81794612/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <textarea id="source">
+        layout: true
+
+        ---
+
+        class: title-slide, utu-back-title
+       
+        # CompCoffee: Data Visualization
+        ## Ilia Kosenkov @ Tuorla, 2018.02.07
+
+        ---
+        
+        class: utu-back-content
+
+        # Why visualization is important? Take a look at the pictures
+        .double[
+        .column[
+        ![:scale 100%](img/1.PNG)
+        ]
+        .column[
+        *MASTER OPTICAL POLARIZATION VARIABILITY DETECTION IN THE MICROQUASAR V404 CYG/GS2023+33,*
+
+        Lipunov et. al, 2016
+        ]
+        ]
+
+        ---
+        
+        class: utu-back-content
+
+        # Why visualization is important? Zoomed in
+        
+        ![:scale 100%](img/2.PNG)
+
+        ---
+        
+        class: utu-back-content
+
+        # Why visualization is important? Zoomed in and printed in B&W
+        
+        ![:scale 100%](img/2_bw.PNG)
+
+        ---
+
+        class: utu-back-content
+
+        # Here is an example of a better structured plot
+
+        .double[
+        .column[
+        ![](img/3.png)
+        ]
+        .column[
+        *Repetitive patterns in rapid optical variations in the
+        nearby black-hole binary V404 Cygni,* 
+        
+        Kimura et. al, 2016
+
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Here is an example of a better structured plot
+
+        .double[
+        .column[
+        ![](img/3_tick.png)
+        ]
+        .column[
+        - All four axes are present
+        - Tick labels are drawn only for large ticks.
+        - Magnitudes on the left vs log10 of flux on the right        
+
+        ]
+        ]
+
+        
+        ---
+
+        class: utu-back-content
+
+        # Here is an example of a better structured plot
+
+        .double[
+        .column[
+        ![](img/3_leg.png)
+        ]
+        .column[
+        - Informative & large legend at the top
+
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Here is an example of a better structured plot
+
+        .double[
+        .column[
+        ![](img/3_off.png)
+        ]
+        .column[
+        - Offsets for each band - to prevent overlapping of data 
+        - Even though they are indistinguishable in B&W, the order of bands from top to bottom can be guessed from the legend
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Here is an example of a better structured plot
+
+        .double[
+        .column[
+        ![](img/3_avg.png)
+        ]
+        .column[
+        - 'Moving average' pictured by large open points highlight the overall trend in data
+        - The amplitude of short-term variability can still be seen in the plot
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Constructing a plot layer by layer
+
+        .double[
+        .column[
+        ![:scale 95%](img/4_0.png)
+        ]
+        .column[
+        - We start at the empty plot with only x- and y- limits determined
+        - Notice the ugly y axis labels of something * e-26 (it is `\(10^{-26}\)`)
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Constructing a plot layer by layer
+
+        .double[
+        .column[
+        ![:scale 95%](img/4_1.png)
+        ]
+        .column[
+        - Data added, only points
+        - Same colour, same plot symbols, same sizes
+        - No errors
+        - Linear scale
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Constructing a plot layer by layer
+
+        .double[
+        .column[
+        ![:scale 95%](img/4_2.png)
+        ]
+        .column[
+        - Colors, symbols and symbol sizes highlight different regions
+        - Errors are comparable to symbol sizes
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Constructing a plot layer by layer
+
+        .double[
+        .column[
+        ![:scale 95%](img/4_3.png)
+        ]
+        .column[
+        - Log10 scales on y-axes
+        - Small ticks addded at various intervals
+        - Axes names
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Constructing a plot layer by layer
+
+        .double[
+        .column[
+        ![:scale 95%](img/4_4.png)
+        ]
+        .column[
+        - Log10 scales on y-axes
+        - Small ticks addded at various intervals
+        - Axes names
+        - Now large ticks also
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Constructing a plot layer by layer
+
+        .double[
+        .column[
+        ![:scale 95%](img/4_5.png)
+        ]
+        .column[
+        - Log10 scales on y-axes
+        - Small ticks addded at various intervals
+        - Axes names
+        - Now large ticks also
+        - Tick labels
+        ]
+        ]
+
+        ---
+
+        class: title-slide
+        background-image: url(https://i.ytimg.com/vi/zCBK6WEQ4tQ/maxresdefault.jpg)
+        
+        <h1 style="Color:white; font-size:60px; margin-top:500px; margin-left: 40px; position: absolute">Thank you!</h1>
+
+        
+
+
+    </textarea>
+
+    <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
+    </script>
+
+    <script type="text/javascript">
+    remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    remark.macros.size = function (x,y) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + x + 'px; height: ' + y + 'px" />';
+    };
+    remark.macros.author = function () {
+        var url = this;
+        return '<img src="' + url + '" class=author-pic />';
+    };
+    var slideshow = remark.create({
+      ratio: '16:9',
+      slideNumberFormat: '%current% / %total%',
+      highlightStyle: 'default',
+      highlightLines: true,
+      countIncrementalSlides: false
+    }) ;
+    </script>
+
+    <!-- for offline mathjax see http://stackoverflow.com/a/19209462 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+    MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "TeX": {
+          Macros: {AA : "{\\unicode{x212B}}"},
+          extensions: ["autoload-all.js"]
+        },
+        "HTML-CSS": {
+          scale: 90
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+            return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+    });
+    MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      MACROS.color = "Color";
+      delete MACROS.colorbox;
+      delete MACROS.fcolorbox;
+    });
+    MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
