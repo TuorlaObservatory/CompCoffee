@@ -19,6 +19,8 @@ Schedule for 2018
 - [x] Wed 24.01.2018 Road so far (what we already have discussed and what should we focus on)
 - [x] Wed 31.01.2018 Windows Subsystems for Linux
 - [ ] Wed 07.02.2018 Data Visualization 01
+- [ ] Wed 14.02.2018 Skipped
+- [ ] Wed 21.02.2018 Animated plots & Videos
 
 
 
