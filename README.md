@@ -22,7 +22,7 @@ Schedule for 2018
 - [x] Wed 14.02.2018 Skipped
 - [x] Wed 21.02.2018 Data visualization 02 - Animated plots & Videos
 - [x] Wed 28.02.2018 OpenGL & 3D graphics
-- [x] Wed 07.03.2018 [Data Visualization 03 - Python & Matplotlib](.data-visualization/03)
+- [x] Wed 07.03.2018 [Data Visualization 03 - Python & Matplotlib](./data-visualization/03)
 - [ ] Wed 14.03.2018 Bayesian Fitting?
 
 
