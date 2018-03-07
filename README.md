@@ -18,10 +18,11 @@ Schedule for 2018
 
 - [x] Wed 24.01.2018 Road so far (what we already have discussed and what should we focus on)
 - [x] Wed 31.01.2018 Windows Subsystems for Linux
-- [x] Wed 07.02.2018 Data Visualization 01
+- [x] Wed 07.02.2018 [Data Visualization 01](./data-visualization/01)
 - [x] Wed 14.02.2018 Skipped
-- [x] Wed 21.02.2018 Animated plots & Videos
-- [ ] Wed 28.02.2018 OpenGL & 3D graphics
-
+- [x] Wed 21.02.2018 Data visualization 02 - Animated plots & Videos
+- [x] Wed 28.02.2018 OpenGL & 3D graphics
+- [x] Wed 07.03.2018 [Data Visualization 03 - Python & Matplotlib](.data-visualization/03)
+- [ ] Wed 14.03.2018 Bayesian Fitting?
 
 
