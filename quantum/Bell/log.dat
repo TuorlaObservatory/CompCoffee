@@ -1,0 +1,7 @@
+
+Unhandled Exception: System.DllNotFoundException: Unable to load DLL 'Microsoft.Quantum.Simulator.Runtime.dll': The specified module or one of its dependencies could not be found.
+ (Exception from HRESULT: 0x8007007E)
+   at Microsoft.Quantum.Simulation.Simulators.QuantumSimulator.Init()
+   at Microsoft.Quantum.Simulation.Simulators.QuantumSimulator..ctor(Boolean throwOnReleasingQubitsNotInZeroState, Nullable`1 randomNumberGeneratorSeed, Boolean disableBorrowing)
+   at Bell.Driver.Test_Simple() in /mnt/c/Users/iliak/OneDrive/GOOGLEDRIVE/Teaching/Programming/Temp/QS/Bell/Driver.cs:line 26
+   at Bell.Driver.Main(String[] args) in /mnt/c/Users/iliak/OneDrive/GOOGLEDRIVE/Teaching/Programming/Temp/QS/Bell/Driver.cs:line 12
