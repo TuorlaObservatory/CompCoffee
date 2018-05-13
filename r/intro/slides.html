@@ -105,6 +105,41 @@
         ```
         ]
         ]
+
+        ---
+
+        class: utu-back-content
+        # Examples: Get help & make a plot
+        .column[
+        ```R
+        > f # Type the name of previously defined func
+        # function(x) {
+        # mn <- mean(x)
+        # s <- sd(x)
+        # rng <- range(x)
+        # return(c(mn, s, rng))
+        # }
+        > ?mean  # Opens local web page with manual
+        > data <- data.frame(x = 1:10, 
+        + y = 1:10 + rnorm(10))
+        > plot(data$x, data$y, type = "b", 
+        + pch = 19, lty = 2, col = "blue", 
+        + xlab = "The X", ylab = "The Y")
+        > lines(1:10, 1:10, lty = 1, col = "#FF0000")
+        > data[1:2, ]
+        #   x        y
+        # 1 1 1.721106
+        # 2 2 1.848209
+        > quit("no")
+        ```
+        ]
+
+        
+        .top[.right[
+        ![:scale 47%](plt_1.jpg)
+        ]]
+        
+       
     </textarea>
 
     <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
