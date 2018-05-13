@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UTU</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.rawgit.com/Ilia-Kosenkov/UTU-slides/81794612/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <textarea id="source">
+        layout: true
+
+        ---
+
+        class: title-slide, utu-back-title
+       
+        # Introduction to `R` 
+        ## Functional programming & Bayesian analysis
+        
+        ---
+
+        class: utu-back-content
+        # Normal slide
+
+    </textarea>
+
+    <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
+    </script>
+
+    <script type="text/javascript">
+    remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    remark.macros.size = function (x,y) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + x + 'px; height: ' + y + 'px" />';
+    };
+    remark.macros.author = function () {
+        var url = this;
+        return '<img src="' + url + '" class=author-pic />';
+    };
+    var slideshow = remark.create({
+      ratio: '16:9',
+      slideNumberFormat: '%current% / %total%',
+      highlightStyle: 'default',
+      highlightLines: true,
+      countIncrementalSlides: false
+    }) ;
+    </script>
+
+    <!-- for offline mathjax see http://stackoverflow.com/a/19209462 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+    MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "TeX": {
+          Macros: {AA : "{\\unicode{x212B}}"},
+          extensions: ["autoload-all.js"]
+        },
+        "HTML-CSS": {
+          scale: 90
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+            return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+    });
+    MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      MACROS.color = "Color";
+      delete MACROS.colorbox;
+      delete MACROS.fcolorbox;
+    });
+    MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
