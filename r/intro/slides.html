@@ -48,11 +48,63 @@
         class: utu-back-content
         # Basic concepts
 
-        - There are several base types in `R`, `integer`, `double`, `character` and `logical` among them. It is safe to say that everything in `R` is a first-class object
+        - There are several base types in `R`, `integer`, `double`, `character`, `complex` and `logical` among them. It is safe to say that everything in `R` is a first-class object
         - The simplest collection is a `vector` - a group of objects of the same type. Any standalone primitive object (like number 2.0) is itself a `vector` of size **1**.
         - Matricies are arrays of higher order (rectangular), lists are general collections of any objects of any types, data frames are data-base like tables with columns of equal length but different type. Another type, part of the `tidyverse` package, `tibble` extends functions of data frames.
         - Higher order types can be defined using class systems (I am aware of several, `S3`, `S4`, `Reference classes` and `S6`)
 
+        ---
+        
+        class: utu-back-content
+        # Examples: Run interactively
+        .double-column[
+        .column[
+        ```R
+        > x <- 5 # Assigns 5 (double) to x
+        > x      # Prints x, equivalent to print(x)
+        # [1] 5
+        > x[1]   # Accesses 1st element of a vector
+        # [1] 5
+        > y <- list(x, "Hello world") # A list
+        > y      
+        # [[1]]
+        # [1] 5
+        #
+        # [[2]]
+        # [1] "Hello world"
+        > a <- 1:7 # Integer range from 1 to 7
+        > a ^ 2    # Vectorized power operation
+        # [1] 1 4 9 16 25 36 49
+        > mean(a ^ 2) # Calls buil-in stat. mean 
+        # [1] 38.5
+        > sd (a ^ 2)  # Standard deviation
+        # [1] 34.17358
+        ```
+        ]
+        .column[
+        ```R
+        > sprintf("Compare %3.2f to %3.2e", 0.0123, 0.0123)
+        # [1] "Compare 0.01 to 1.23e-02"
+        > quantile(rnorm(n = 100, mean = 0, sd = 3), 
+        + probs = c(0.16, 0.84))
+        #       16%       84%
+        # -3.191771  2.949907
+        > f <- function(x) {
+        + mn <- mean(x)
+        + s <- sd(x)
+        + rng <- range(x)
+        + return(c(mn, s, rng))
+        +}
+        > f(c(10, 20, 30, 123, 0.06, -100))
+        # [1]   13.84333   71.24490 -100.00000  123.00000
+        > z <- 0
+        > for (i in 1:100) z <- z + i; print(z)
+        # [1] 5050
+        > sum(1:100)
+        # [1] 5050
+        ```
+        ]
+        ]
     </textarea>
 
     <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
