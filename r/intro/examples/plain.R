@@ -1,10 +1,12 @@
 library(rjags)  # Loads library for R <--> JAGS interoperability
 
+
 JAGSDemo <- function(){
     
     # Number of iterations
     n_iter <- 1e4
     n_ch <- 3
+    
     # Genreating data
     n <- 100L
     modelF <- function(z) 0.23 * z - 64 
@@ -28,6 +30,7 @@ JAGSDemo <- function(){
         x = data$x,
         obs = data$y
     )
+
     con <- textConnection(modelStr)
     mdl <- jags.model(con, input, n.chain = n_ch, n.adapt = n_iter)
     close(con)
@@ -46,8 +49,8 @@ JAGSDemo <- function(){
 
     stat <- as.data.frame(do.call(rbind, statList))
 
-    fittedF <- function(z) stat["a", "M"] * z + stat["b", "M"]
-    data$y_fit <- fittedF(data$x)
+    fittedF <- function(z, p) p[1] * z + p[2]
+    data$y_fit <- fittedF(data$x, stat$M)
     scat <- stat["scat", "M"]
 
     plot(NA,
@@ -61,11 +64,8 @@ JAGSDemo <- function(){
     points(data$x, data$y, pch = 19, cex = 1.25)
 
     lines(data$x, modelF(data$x), lty = 2, col = "red", lwd = 2)
-    
 
     lines(data$x, data$y_fit, lty = 1, col = "blue", lwd = 2)
-
-
 
     print(stat)
 }
