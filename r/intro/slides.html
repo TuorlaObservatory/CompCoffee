@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UTU</title>
+    <title>Introduction to R</title>
     <meta charset="utf-8" />
     <link href="https://cdn.rawgit.com/Ilia-Kosenkov/UTU-slides/81794612/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -17,7 +17,6 @@
         class: title-slide, utu-back-title
        
         # Introduction to `R` 
-        ## Functional programming & Bayesian analysis
         
         ---
 
@@ -36,9 +35,9 @@
         
         class: utu-back-content
         # What is `R`?
-        - I is **free** and available for all major OS.
+        - It is **free** and available for all major OS.
         - `R` is an `interpreted` language.
-        - `R` itself is a rather 'modern' **GNU** implmentation of `S` language,which in turn was developed by *Bell Laboratories*. The first stable beta version was released around 2000.
+        - `R` itself is a rather 'modern' **GNU** implmentation of `S` language, which in turn was developed by *Bell Laboratories*. The first stable beta version was released around 2000.
         - Part of `R` functions are written in `R` itself and make it easy to understand, part are written in `C`, `FORTRAN` and other languages for the sake of the performance (mostly computational parts). There is a toolchain for building `R \(\leftrightarrow\) C` interoperable libraries.
         - `R` can be extended through *packages* that can be installed from different centralized repositories (`CRAN`, `MRAN` and mirrors), directly from directories on local machine, from *`git` repos and from many other sources.
 
@@ -154,6 +153,52 @@
         ```
         - Now check out code examples (demo)
        
+        ---
+        
+        class: utu-back-content
+        # More useful examples
+        .double-column[
+        .column[
+        Assignment operators:
+        ```R
+        <- and -> are default operators
+        = is used with named func. arguments
+        <<- and ->> are global asignment ops.
+        > getwd()  # Returns current working directory
+        # [1] "\path\to\current\dir"
+        > setwd("\path\to\new\dir") # Sets work dir
+        ```
+        ```R
+        > library(parallel)
+        > library(doSNOW)
+        > cl <- makeCluster(2, "SOCK")
+        > registerDoSNOW(cl)
+        > stopCluster(cl)
+        > foreach(...) %dopar% {...}
+        ```
+        ]
+        .column[
+        Loop alternatives
+        ```R
+        apply, lapply, sapply, vapply
+        ```
+        ```R
+        > library(foreach)
+        > foreach(i = 1:2) %do% {y^2}
+        # [[1]]
+        # [1] 1
+        #
+        # [[2]]
+        # [1] 4
+        ```
+        ]
+        ]
+
+        ---
+
+        class: utu-back-title, title-slide
+        
+        # Thank you!
     </textarea>
 
     <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
