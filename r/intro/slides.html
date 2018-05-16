@@ -167,29 +167,78 @@
         > getwd()  # Returns current working directory
         # [1] "\path\to\current\dir"
         > setwd("\path\to\new\dir") # Sets work dir
-        ```
-        ```R
-        > library(parallel)
-        > library(doSNOW)
-        > cl <- makeCluster(2, "SOCK")
-        > registerDoSNOW(cl)
-        > stopCluster(cl)
-        > foreach(...) %dopar% {...}
-        ```
-        ]
-        .column[
+        ``` 
         Loop alternatives
         ```R
         apply, lapply, sapply, vapply
+        > sapply(1:5, function(x) (x + 1) ^ 2)
+        # [1]  4  9 16 25 36
         ```
+       
+        ]
+        .column[
+       
         ```R
         > library(foreach)
-        > foreach(i = 1:2) %do% {y^2}
+        > foreach(i = 1:2) %do% { i ^ 2}
         # [[1]]
         # [1] 1
         #
         # [[2]]
         # [1] 4
+        > library(parallel)
+        > library(doSNOW)
+        > cl <- makeCluster(2, "SOCK")
+        > registerDoSNOW(cl)
+        > foreach(...) %dopar% {...}
+        > stopCluster(cl)
+        ```
+        ```R
+        > file.path("dir1", "dir2")
+        # "dir1/dir2"
+        ```
+        ]
+        ]
+
+        ---
+        
+        class: utu-back-content
+        # More useful examples
+        .double-column[
+        .column[
+        ```R
+        > paste("d", c("x", "y", "z"), sep = "_")
+        # [1] "d_x" "d_y" "d_z"
+        > substring("Hello World!", 7, 11)
+        # [1] "World"
+        > grepl("[W|w]o.*!$", 
+        + c("World!", "world!", "world"))
+        # [1]  TRUE  TRUE FALSE
+        > c(5 / 2, 5 %% 2, 5 %/% 2)
+        # [1] 2.5 1.0 2.0
+        > c(1, 5, 11) %in% (1:10)
+        # [1]  TRUE  TRUE FALSE
+        > setNames(c(1, 2, 3), c("a", "b", "c"))
+        # a b c
+        # 1 2 3
+        > order(c(20, 50, 10, 90, 30))
+        # [1] 3 1 5 2 4
+        ```
+        ]
+        .column[
+        ```R
+        > sink("filename.dat") # Output goes to file
+        > print("Hello World!")
+        # Nothing in terminal, line appears in file
+        > sink() # Closes last sink
+        > pdf("file.pdf", width = 7, height = 5)
+        > plot(1:5, 5:1) # Plot goes into pdf file
+        > dev.off() # Closes current device !important!
+        > tryCatch(stop("Sample error"), 
+        + error = function(e) print("Err handled"),
+        + finally = print("Cleanup"))
+        # [1] "Cleanup"
+        # [1] "Err handled"
         ```
         ]
         ]
