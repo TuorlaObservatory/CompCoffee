@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyTest", "PyTest\PyTest.pyproj", "{656AC3B8-BAB6-4A12-B343-CBB9C5C4211D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{656AC3B8-BAB6-4A12-B343-CBB9C5C4211D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656AC3B8-BAB6-4A12-B343-CBB9C5C4211D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{656AC3B8-BAB6-4A12-B343-CBB9C5C4211D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{656AC3B8-BAB6-4A12-B343-CBB9C5C4211D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656AC3B8-BAB6-4A12-B343-CBB9C5C4211D}.Release|x64.ActiveCfg = Release|Any CPU
+		{656AC3B8-BAB6-4A12-B343-CBB9C5C4211D}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A87803B4-1ED0-46E2-BF5D-018F54C111BC}
+	EndGlobalSection
+EndGlobal
