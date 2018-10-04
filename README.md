@@ -23,6 +23,9 @@ Schedule for 2018
 - [x] Wed 21.02.2018 Data visualization 02 - Animated plots & Videos
 - [x] Wed 28.02.2018 OpenGL & 3D graphics
 - [x] Wed 07.03.2018 [Data Visualization 03 - Python & Matplotlib](./data-visualization/03)
-- [ ] Wed 16.05.2018 [Introduction to `R` and Bayesian fitting](./r/intro)
+- [x] Wed 16.05.2018 [Introduction to `R` and Bayesian fitting](./r/intro)
 
 
+- [x] Tue 25.09.2018 `Python` as object-oriented language
+- [x] Tue 02.10.2018 Parallel programming: `MPI` & clusters
+- [ ] Tue 09.10.2018 **TBA**
