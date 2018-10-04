@@ -27,5 +27,5 @@ Schedule for 2018
 
 
 - [x] Tue 25.09.2018 [`Python` as object-oriented language](./python-oop)
-- [x] Tue 02.10.2018 [Parallel programming: `MPI` & clusters](./parallel-mpi)
+- [x] Tue 02.10.2018 [Parallel programming: `MPI` & clusters](./parallel-MPI)
 - [ ] Tue 09.10.2018 **TBA**
