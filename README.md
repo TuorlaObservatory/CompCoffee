@@ -28,4 +28,7 @@ Schedule for 2018
 
 - [x] Tue 25.09.2018 [`Python` as object-oriented language](./python-oop)
 - [x] Tue 02.10.2018 [Parallel programming: `MPI` & clusters](./parallel-MPI)
-- [ ] Tue 09.10.2018 **TBA**
+- [x] Tue 09.10.2018 Non-standard programming in `Python`
+- [x] Tue 16.10.2018 Skipped
+- [x] Tue 23.10.2018 [CodinGame](https://www.codingame.com/)
+- [ ] Tue 30.10.2018 Parallel programming using `OpenMP`: Introduction
