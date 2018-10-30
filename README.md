@@ -31,4 +31,4 @@ Schedule for 2018
 - [x] Tue 09.10.2018 Non-standard programming in `Python`
 - [x] Tue 16.10.2018 Skipped
 - [x] Tue 23.10.2018 [CodinGame](https://www.codingame.com/)
-- [ ] Tue 30.10.2018 Parallel programming using `OpenMP`: Introduction
+- [ ] Tue 30.10.2018 Parallel programming using `OpenMP`: [Introduction](./OpenMP-MPI)
