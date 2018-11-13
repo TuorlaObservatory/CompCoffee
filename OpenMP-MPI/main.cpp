@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 {
 	print_threads(omp_get_num_procs());
 	
-	shared_loop_1(7, 29);
+	shared_loop_1(3, 10);
 	shared_loop_2(7, 29);
 	shared_loop_3(7, 29);
 

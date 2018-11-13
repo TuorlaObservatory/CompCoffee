@@ -25,8 +25,7 @@ void shared_loop_3(const int n, const int total)
 
 	print_header("sh_loop_3_for", n);
 
-	#pragma omp parallel
-	#pragma omp for
+	#pragma omp parallel for
 	for (auto i = 0; i < total; i++)
 	{
 		#pragma omp critical

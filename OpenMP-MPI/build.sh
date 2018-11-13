@@ -29,4 +29,4 @@ g++ -fopenmp -std=gnu++17 \
 	example_2.cpp         \
 	example_3.cpp         \
 	example_4.cpp         \
-	--verbose -o ./Debug/OpenMP-MPI.out
+	-o ./Debug/OpenMP.out

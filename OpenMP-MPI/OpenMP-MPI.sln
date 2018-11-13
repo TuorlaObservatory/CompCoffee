@@ -5,22 +5,38 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenMP-MPI", "OpenMP-MPI.vcxproj", "{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MPI", "MPI\MPI.vcxproj", "{504504E3-365D-4534-8A19-8F1B2C1FBC2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Debug|x64.ActiveCfg = Debug|x64
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Debug|x64.Build.0 = Debug|x64
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Debug|x86.ActiveCfg = Debug|Win32
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Debug|x86.Build.0 = Debug|Win32
+		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Release|Any CPU.ActiveCfg = Release|Win32
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Release|x64.ActiveCfg = Release|x64
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Release|x64.Build.0 = Release|x64
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Release|x86.ActiveCfg = Release|Win32
 		{6EC058BD-36F4-4223-A7A0-3CDFC83CEF03}.Release|x86.Build.0 = Release|Win32
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Debug|x64.ActiveCfg = Debug|x64
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Debug|x64.Build.0 = Debug|x64
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Debug|x86.ActiveCfg = Debug|Win32
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Debug|x86.Build.0 = Debug|Win32
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Release|Any CPU.ActiveCfg = Release|Win32
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Release|x64.ActiveCfg = Release|x64
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Release|x64.Build.0 = Release|x64
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Release|x86.ActiveCfg = Release|Win32
+		{504504E3-365D-4534-8A19-8F1B2C1FBC2D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
