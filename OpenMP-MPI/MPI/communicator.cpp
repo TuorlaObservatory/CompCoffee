@@ -26,14 +26,14 @@ void communicator()
 
 	int size;
 	throw_if(MPI_Comm_size(MPI_COMM_WORLD, &size), "MPI_Comm_size");
-
+	
 	if(rank == 0)
 	{
 			for(auto counter = 0; counter < size  * (size - 1) / 2;)
 			{
 				MPI_Status status;
 				throw_if(MPI_Probe(MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status), "MPI_Probe");
-
+				
 				int count;
 				throw_if(MPI_Get_count(&status, MPI_CHAR, &count), "MPI_Get_count");
 

@@ -30,7 +30,7 @@ int main(int argc, char** argv)
 
 	example_1(std::max(omp_get_num_procs() - 1, 1));
 	example_1(16);
-	example_2(13);
+	example_2(64);
 	example_3(7, 15);
 	example_4(5);
 

@@ -38,6 +38,7 @@ void example_2(const int n)
 		#pragma omp barrier
 		#pragma omp critical
 		print_out(counter, n);
-
+		
 	}
+
 }
